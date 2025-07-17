@@ -90,8 +90,8 @@ jobs:
           for workflow in "${!successful_runs[@]}"; do
             echo "Processing successful runs for: $workflow"
             read -ra runs <<< "${successful_runs[$workflow]}"
-            if [ ${#runs[@]} -gt 2 ]; then
-              delete_ids=("${runs[@]:2}")
+            if [ ${#runs[@]} -gt 1 ]; then
+              delete_ids=("${runs[@]:1}")
               for run_id in "${delete_ids[@]}"; do
                 echo "Deleting old successful run: $run_id"
                 curl -s -X DELETE -H "Authorization: Bearer $GITHUB_TOKEN" \
