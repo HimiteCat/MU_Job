@@ -86,7 +86,7 @@ jobs:
             fi
           done
 
-          # 清理各工作流的成功记录（保留最近6条）
+          # 清理各工作流的成功记录（保留最近6条）1
           for workflow in "${!successful_runs[@]}"; do
             echo "Processing successful runs for: $workflow"
             read -ra runs <<< "${successful_runs[$workflow]}"
