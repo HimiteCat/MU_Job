@@ -1,5 +1,5 @@
 name: Cleanup Old Workflow Runs
-# 20251107
+# 20251230
 on:
   workflow_dispatch:
   workflow_run:
