@@ -1,7 +1,8 @@
 name: Cleanup Old Workflow Runs
-# 20251111
+
 permissions:
   contents: write
+  actions: write
 
 on:
   workflow_dispatch:
