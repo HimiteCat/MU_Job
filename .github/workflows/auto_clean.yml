@@ -30,7 +30,7 @@ jobs:
           file="README.md"
           # 获取当前系统日期（YYYYMMDD）并替换注释中的 8 位日期
           current_date=$(date +%Y%m%d)
-          sed -E -i "s/^# [0-9]{8}/- $current_date/" "$file"
+          sed -E -i "s/^- [0-9]{8}/- $current_date/" "$file"
 
           # 如果文件有变动则提交并推送
           if ! git diff --quiet "$file"; then
